@@ -1,0 +1,444 @@
+/*
+Theme Name: Truecolors
+Theme URI:
+Description: A wordpress theme for themeforest.net
+Version: 4.0
+Author: Kristoffer Eriksson
+Author URI:
+Tags: Colors, boring
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: "Hoefler Text", Georgia, serif, sans-serif;
+	color: #000;
+	background: #eee;
+}
+
+input, textarea {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+
+p {
+	margin: 4px 0 14px;
+	line-height: 24px;
+}
+
+h1 {
+	font-weight: 100;
+	font-size: 32px;
+}
+
+h2, h3 {
+	font-weight: 400;
+}
+
+h2 {
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+
+h3 {
+	margin: 5px 0;
+}
+
+h1, h2, h3 {
+	letter-spacing: 0.6px;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+.clear { 
+	clear: both;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+header, footer, section, article, aside, nav {
+	display: block;
+}
+
+#page-wrap {
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 10px #ccc;
+	margin: 0 auto;
+	width: 960px;
+	-moz-box-shadow: 0 0 10px #ccc;
+	-webkit-box-shadow: 0 0 10px #ccc;
+}
+
+header {
+	position: relative;
+}
+
+header h1 {
+	margin: 20px;
+}
+
+#search {
+	position: absolute;
+	right: 38px;
+	top: 3px;
+}
+
+nav {
+	background: #10729C;
+ 	border-bottom: 1px solid #000;
+	border-top: 1px solid #000;
+	font-size: 14px;
+	height: 60px;
+}
+
+nav ul {
+	font-weight: 700;
+	margin-left: 20px;
+	text-transform: uppercase;
+}
+
+nav li {
+	display: inline;
+	margin-left: 20px;
+}
+
+nav li:first-child {
+	margin-left: 0;
+}
+
+nav li a {
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 62px;
+	text-decoration: none;
+}
+
+nav li a:hover {
+	text-decoration: underline;
+}
+
+#fullContent {
+	margin: 10px 10px 10px 0;
+	padding: 9px 13px 9px 18px;
+	font-size: 18px;
+}
+
+#content {
+	float: left;
+	margin: 10px 10px 10px 0;
+	padding: 9px 13px 9px 18px;
+	width: 646px;
+	font-size: 18px;
+}
+
+.post_snippet {
+	margin: 0 0 40px;
+	font-size: 16px;
+}
+
+.post_snippet h2 {
+	font-size: 28px;
+	background: #10729C;
+	color: #fff;
+	margin-left: -35px;
+	padding: 7px 20px 2px 36px; 
+	position: relative;
+	-moz-box-shadow: 1px 1px 1px #000;
+	-webkit-box-shadow: 1px 1px 1px #000;
+	text-shadow: 0 0 8px #000;
+	display: inline-block;
+}
+
+.arrow {  
+	width: 0;
+	height: 0;  
+	line-height: 0;  
+	border-left: 17px solid transparent;  
+	border-top: 14px solid #054865;  
+	top: 38px;  
+	left: 0;  
+	position: absolute;  
+}  
+
+.post_snippet p {
+	margin: 4px 0;
+}
+
+.post_snippet img {
+	border: 1px solid #ccc;
+}
+
+.thumb_image {
+	width: 630px;
+	height: 202px;
+	margin-bottom: 10px;
+	background: #fff;
+	padding: 6px;
+	border: 1px solid #eee;
+	-moz-box-shadow: 0 0 8px #555353;
+	-webkit-box-shadow: 0 0 8px #555353;
+	box-shadow: 0 0 8px #555353;
+}
+
+.post-box {
+	border-top: 1px solid #E1E1E1;
+	border-bottom: 1px solid #E1E1E1;
+	color: #10729C;
+	display: block;
+	font-size: 13px;
+	overflow: hidden;
+	padding: 5px 0;
+}
+
+.post-box a {
+	color: #10729C;
+}
+
+.read {
+	background: #10729C;
+	color: #fff;
+	font-size: 16px;
+	border: 1px solid #298CBA;
+	text-shadow:0 2px 0 #000;
+	letter-spacing: 0.5px;
+	display: block;
+	width: 150px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-top: 12px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+.numberComments {
+	float: right;
+}
+
+.editpost {
+	font-size: 16px;
+	font-weight: 300;
+}
+
+.commentEdit {
+	float: right;
+	font-size: 13px;
+}
+
+.avatar {
+	border: 1px solid #d3d3d3;
+	float: left;
+	margin: 15px 0;
+	padding: 4px;
+}
+
+.commentDate {
+	float: right;
+	display: block;
+	color: #999;
+	font-size: 13px;
+}
+
+.commentlist {
+	width: 646px;
+	color: #000;
+}
+
+.commentlist cite {
+	float: left;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	margin: 0 0 15px;
+}
+
+.commentlist li div {
+	overflow: hidden;
+}
+
+.comment-text {
+	margin-bottom: 8px;
+	padding: 0 0 0 22px;
+}
+
+.comment-text p {
+	clear: both;
+	font-size: 15px;
+}
+
+.commentlist li {
+	border-top: 1px solid #10729C;
+}
+
+.commentlist .children li {
+	margin-left: 60px;
+}
+
+#reply-title, #respond .form-submit {
+	margin: 12px 0;
+}
+
+#respond {
+	border-top: 1px solid #10729C;
+	color: #000;
+}
+
+#respond .comment-notes, #respond .logged-in-as {
+	margin-bottom: 12px;
+}
+
+#respond label {
+	color: #888;
+	font-size: 12px;
+}
+
+#respond .required {
+	color: #ff4b33;
+	font-weight: 700;
+}
+
+#respond input {
+	margin: 3px 0 9px;
+	width: 98%;
+}
+
+#respond p {
+	margin: 0;
+}
+
+#respond textarea {
+	margin: 3px 0 5px;
+	width: 98%;
+}
+
+#respond .form-submit input {
+	width: auto;
+}
+
+#single_post {
+	margin: 0 0 30px;
+	color: #888;
+	font-size: 18px;
+}
+
+#single_post img {
+	border: 1px solid #000;
+	width: 628px;
+	height: 200px;
+	margin-top: 4px;
+}
+
+#single_post h2 {
+	margin-bottom: 0;
+}
+
+.form-allowed-tags {
+	font-size: 13px;
+}
+
+.postInfo {
+	font-size: 13px;
+	color: #10729C;
+}
+
+.portfolio_col {
+	margin: 0 36px 20px 0;
+	width: 282px;
+	font-size: 15px;
+	color: #000;
+	float: left;
+}
+
+.portfolio_col h2 {
+	font-size: 25px;
+}
+
+.image-box {
+	margin-bottom: 10px;
+	height: 85px;
+	width: 268px;
+	padding: 6px;
+	background: #fff;
+	border: 1px solid #eee;
+	-moz-box-shadow: 0 0 8px #555353;
+	-webkit-box-shadow: 0 0 8px #555353;
+	box-shadow: 0 0 8px #555353;
+}
+
+.portfolio_col img {
+	border: 1px solid #ccc;
+}
+
+.portfolio_col:nth-child(3n) {
+	margin-right: 0;
+}
+
+aside {
+	float: left;
+	font-size: 14px;
+	margin: 18px;
+	width: 237px;
+}
+
+aside li {
+	display: block;
+	margin: 10px 0 20px;
+}
+
+aside li:first-child {
+	margin-top: 0;
+}
+
+aside li ul li {
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+aside li:last-child {
+	border-bottom: none;
+}
+
+.widgettitle {
+	font-size: 21px;
+	border-bottom: 2px solid #10729C;
+	margin-bottom: 8px;
+}
+
+#wp-calendar caption {
+	background: #10729C;
+	color: #fff;
+	padding: 4px 0;
+	margin: 5px;
+}
+
+footer {
+	border-top: 4px solid #10729C;
+	clear: both;
+	padding: 18px;
+}
