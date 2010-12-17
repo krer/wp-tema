@@ -1,3 +1,4 @@
+<div id="comments">
 <?php if( !empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) ) : ?>
 	<?php die('You can not access this page directly!'); ?>
 <?php endif; ?>
@@ -8,7 +9,7 @@
 
 <?php if( have_comments() ) : ?>
 	<h3><?php comments_number('0 comments', '1 comment', '% comments'); ?></h3>
-<div id="comments">
+
 	<ol class="commentlist">
 		<?php wp_list_comments('callback=truecolor_comment'); ?>
 	</ol>

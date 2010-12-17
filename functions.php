@@ -3,16 +3,15 @@
 if ( function_exists('register_sidebars') )
 	register_sidebars();
 
-
 function truecolor_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
-   <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
    	<div id="comment-<?php comment_ID(); ?>"> 
 		<?php if ($comment -> comment_approved ='0') : ?>
 			<p>Your comment is awaiting approval</p>
 		<?php endif; ?>
 				
-		<?php echo get_avatar($comment, 60); ?><br />
+		<?php echo get_avatar($comment, 60); ?>
 			
 		<div class="comment-text">  
 			<cite><?php comment_author(); ?></cite>        
@@ -20,7 +19,8 @@ function truecolor_comment($comment, $args, $depth) {
 			<?php comment_text(); ?>
 						
             <div class="commentEdit"><?php edit_comment_link('Edit', '', ''); ?>
-     		<?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?></div>
+     			<?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+     		</div>
 		</div>
 	</div> 
 <?php } 
@@ -41,11 +41,18 @@ add_filter('the_content_more_link', 'remove_more_jump_link');
 
 function new_excerpt_more($more) {
        global $post;
-	return '... <a href="'. get_permalink($post->ID) . '">' . '<span class="read">Read more</span>' . '</a>';
+	return '...<a href="'.get_permalink().'" class="read_more">Read more</a>';
 }
 
 add_filter('excerpt_more', 'new_excerpt_more');
 
 add_theme_support('post-thumbnails');
+
+
+if (function_exists('register_nav_menus')) {
+	register_nav_menus( array(
+			'main_nav' => 'Main Navigation Menu'
+	));
+}
 
 ?>
