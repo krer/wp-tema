@@ -267,19 +267,19 @@ aside {
 .post_snippet {
 	background: #fff;
 	border: 1px solid #d6d6d6;
-	padding: 10px;
+	padding: 15px;
 	margin: 0 10px 10px 0;
-	width: 287px;
-	height: 395px;
-	font-size: 15px;
+	width: 277px;
+	height: 310px;
+	font-size: 13px;
 	position: relative;
 	overflow: hidden;
 	float: left;
 }
 
 .thumb_image {
-	width: 280px;
-	height: 89px;
+	width: 270px;
+	height: 85px;
 	margin-bottom: 10px;
 	background: #fff;
 	padding: 2px;
@@ -287,20 +287,20 @@ aside {
 }
 
 .thumb_image img {
-	width: 280px;
-	height: 89px;
+	width: 270px;
+	height: 85px;
 }
 
 .postmetadata {
 	position: absolute;
-	top: 120px;
-	right: 10px;
+	top: 118px;
+	right: 15px;
 }
 
 .read_more {
 	display: block;
 	float: right;
-	margin-top: 20px;
+	margin-top: 10px;
 	color: #10729C;
 }
 
