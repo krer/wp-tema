@@ -41,7 +41,7 @@ add_filter('the_content_more_link', 'remove_more_jump_link');
 
 function new_excerpt_more($more) {
        global $post;
-	return '...<a href="'.get_permalink().'" class="read_more">Read more</a>';
+	return '...</p><a href="'.get_permalink().'" class="read_more">Read more</a>';
 }
 
 add_filter('excerpt_more', 'new_excerpt_more');

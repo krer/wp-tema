@@ -41,8 +41,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
 	font-family: "Hoefler Text", Arial, serif;
-	color: #000;
-	background: url(img/bg.jpg);
+	background: url('img/bg.jpg');
 }
 
 input, textarea {
@@ -116,7 +115,7 @@ h1, h2, h3 {
  */
 
 #page-wrap {
-	margin: 30px auto;
+	margin: 30px auto 0;
 	width: 960px;
 }
 
@@ -126,32 +125,24 @@ header {
 
 nav {
 	background: #10729C;
- 	border-bottom: 1px solid #000;
 	font-size: 14px;
 	position: relative;
 	height: 60px;
 	text-align: left;
 	background: -moz-linear-gradient(100% 100% 90deg, #054b65, #10729C);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#10729C), to(#054b65));
-	-webkit-border-top-left-radius: 10px;
-	-webkit-border-top-right-radius: 10px;
-	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright: 10px;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
 #content {
-	background: #eaeaea;
 	overflow: hidden;
 	padding: 20px 20px 10px;
 }
 
 footer {
-	border-top: 4px solid #10729C;
 	padding: 18px;
-	text-align: right;
-	color: #fff;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -161,8 +152,6 @@ footer {
  */
 
 header h1 { margin-bottom: 15px; }
-
-header h1 a { color: #fff; text-shadow: 0 0 3px #000; }
 
 /* -------------------------------------------------------------------------------------
  *
@@ -216,46 +205,11 @@ aside {
 	background: #fff;
 	border: 1px solid #d6d6d6;
 	float: left;
-	padding: 10px 13px 0;
+	padding: 15px 15px 0;
 	font-size: 14px;
-	width: 254px;
-}
-
-
-/* -------------------------------------------------------------------------------------
- *
- * Feature post
- *
- */
-
-.featured_snippet {
-	background: #fff;
-	border: 1px solid #d6d6d6;
-	padding: 10px;
-	margin-bottom: 10px;
-	font-size: 16px;
-	position: relative;
-	overflow: hidden;
-}
-
-.featured_snippet h2 {
-	margin-top: 10px;
-	font-size: 28px;
-}
-
-.featured_image {
-	width: 300px;
-	height: 189px;
-	margin-right: 20px;
-	background: #fff;
-	padding: 2px;
-	border: 1px solid #e4e4e4;
-	float: left;
-}
-
-.featured_image img {
-	width: 300px;
-	height: 189px;
+	width: 250px;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -263,44 +217,48 @@ aside {
  * Blog posts
  *
  */
+ 
+h2 { margin-top: 5px; } 
 
 .post_snippet {
 	background: #fff;
 	border: 1px solid #d6d6d6;
 	padding: 15px;
-	margin: 0 10px 10px 0;
-	width: 277px;
-	height: 310px;
-	font-size: 13px;
+	margin: 0 10px 20px 0;
+	width: 590px;
+	font-size: 15px;
 	position: relative;
 	overflow: hidden;
 	float: left;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 }
 
 .thumb_image {
-	width: 270px;
-	height: 85px;
-	margin-bottom: 10px;
+	width: 190px;
+	height: 190px;
+	margin-right: 20px;
 	background: #fff;
 	padding: 2px;
 	border: 1px solid #e4e4e4;
+	float: left;
 }
 
 .thumb_image img {
-	width: 270px;
-	height: 85px;
+	width: 190px;
+	height: 190px;
 }
 
 .postmetadata {
 	position: absolute;
-	top: 118px;
+	top: 25px;
 	right: 15px;
+	color: #777;
 }
 
 .read_more {
 	display: block;
 	float: right;
-	margin-top: 10px;
 	color: #10729C;
 }
 
@@ -313,10 +271,12 @@ aside {
 #comments {
 	background: #fff;
 	border: 1px solid #d6d6d6;
-	padding: 10px;
+	padding: 15px;
 	margin-bottom: 10px;
-	width: 603px;
+	width: 590px;
 	font-size: 15px;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 } 
 
 .commentEdit {
@@ -339,7 +299,7 @@ aside {
 }
 
 .commentlist {
-	width: 603px;
+	width: 590px;
 	color: #000;
 }
 
@@ -433,18 +393,21 @@ aside {
 #single_post {
 	background: #fff;
 	border: 1px solid #d6d6d6;
-	padding: 10px;
-	margin-bottom: 10px;
-	width: 603px;
+	padding: 15px;
+	margin-bottom: 20px;
+	width: 590px;
 	font-size: 15px;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 }
 
 #single_post img {
-	width: 597px;
-	height: 189px;
-	margin-top: 4px;
+	width: 190px;
+	height: 190px;
+	margin: 4px 10px 10px 0;
 	padding: 2px;
 	border: 1px solid #e4e4e4;
+	float: left;
 }
 
 #single_post h2 {
@@ -465,9 +428,10 @@ aside {
 #full_page {
 	background: #fff;
 	border: 1px solid #d6d6d6;
-	padding: 10px;
-	margin-bottom: 10px;
+	padding: 15px;
 	font-size: 15px;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 } 
 
 /* -------------------------------------------------------------------------------------
@@ -527,7 +491,7 @@ aside li:last-child {
 	border-bottom: none;
 }
 
-.widgettitle {
+aside .widgettitle {
 	font-size: 21px;
 	border-bottom: 2px solid #10729C;
 	margin-bottom: 8px;

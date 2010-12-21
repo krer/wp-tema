@@ -1,21 +1,7 @@
 <aside>
-		<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
+<?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
 		
-		<ul>
-			<li>
-				<h2 class="widgettitle">Recent posts</h2>
-				<ul>
-					<?php 
-						query_posts($query_string . '&cat=-6');
-						$recent_posts = wp_get_recent_posts(); 
-					
-					  foreach($recent_posts as $post){
-        				echo '<li><a href="' . get_permalink($post["ID"]) . '" title="Look '.$post["post_title"].'" >' .   $post["post_title"].'</a> </li> ';
-      				  }
-					?> 
-				</ul>
-			</li>
-					
+		<ul>					
 			<li>
 				<h2 class="widgettitle">Archives</h2>
 				<ul>
@@ -35,5 +21,5 @@
 		<?php endif; ?>
 	</ul>
 </aside>
-<div class="clear"></div>
+		<div class="clear"></div>
 </section>
