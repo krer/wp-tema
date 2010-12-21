@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<?php query_posts($query_string . '&cat=-6'); ?>
-
 <section id="content">
 	<section id="posts">
 				
