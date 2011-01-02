@@ -11,7 +11,7 @@ function truecolor_comment($comment, $args, $depth) {
 			<p>Your comment is awaiting approval</p>
 		<?php endif; ?>
 				
-		<?php echo get_avatar($comment, 60); ?>
+		<?php echo get_avatar(get_the_author_email(), 60); ?>
 			
 		<div class="comment-text">  
 			<cite><?php comment_author(); ?></cite>        
@@ -59,5 +59,15 @@ function new_excerpt_length($length) {
 	return 40;
 }
 add_filter('excerpt_length', 'new_excerpt_length');
+
+function is_type_page() { // Check if the current post is a page
+	global $post;
+
+	if ($post->post_type == 'page') {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 ?>

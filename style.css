@@ -63,10 +63,6 @@ ul, ol {
 	list-style: none;
 }
 
-.screen-reader-text {
-	display: none;
-}
-
 header, footer, section, article, aside, nav {
 	display: block;
 }
@@ -97,6 +93,7 @@ h2, h3 {
 h2 {
 	font-size: 26px;
 	margin-bottom: 5px;
+	margin-top: 5px; 
 }
 
 h3 {
@@ -115,7 +112,7 @@ h1, h2, h3 {
  */
 
 #page-wrap {
-	margin: 30px auto 0;
+	margin: 40px auto 0;
 	width: 960px;
 }
 
@@ -137,12 +134,11 @@ nav {
 }
 
 #content {
-	overflow: hidden;
 	padding: 20px 20px 10px;
 }
 
 footer {
-	padding: 18px;
+	padding: 0 20px 20px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -170,9 +166,7 @@ nav li {
 	margin-left: 20px;
 }
 
-nav li:first-child {
-	margin-left: 0;
-}
+nav li:first-child { margin-left: 0; }
 
 nav li a {
 	color: #fff;
@@ -181,13 +175,33 @@ nav li a {
 	text-decoration: none;
 }
 
-nav li a:hover {
-	text-decoration: underline;
-}
+nav li a:hover { text-decoration: underline; }
 
 #searchform { position: absolute; right: 20px; top: 17px; }
 
-#searchform #s { width: 210px; }
+#searchform #s { 
+	width: 215px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    border: 1px solid #BFBFBF;
+    float: left;
+    margin-right: 5px;
+    padding: 4px 0 4px 4px;
+    -webkit-appearance: none;
+}
+
+#searchsubmit{
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+    background: #333;
+    border: none;
+    color: #fff;
+    font-size: 10px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.screen-reader-text { display: none; }
 
 /* -------------------------------------------------------------------------------------
  *
@@ -202,14 +216,9 @@ nav li a:hover {
 }
 
 aside {
-	background: #fff;
-	border: 1px solid #d6d6d6;
 	float: left;
-	padding: 15px 15px 0;
 	font-size: 14px;
-	width: 250px;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
+	width: 282px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -217,8 +226,6 @@ aside {
  * Blog posts
  *
  */
- 
-h2 { margin-top: 5px; } 
 
 .post_snippet {
 	background: #fff;
@@ -269,14 +276,9 @@ h2 { margin-top: 5px; }
  */
  
 #comments {
-	background: #fff;
-	border: 1px solid #d6d6d6;
-	padding: 15px;
-	margin-bottom: 10px;
+	margin-top: 25px;
 	width: 590px;
 	font-size: 15px;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
 } 
 
 .commentEdit {
@@ -284,11 +286,13 @@ h2 { margin-top: 5px; }
 	font-size: 13px;
 }
 
-.avatar {
+#single_post .avatar {
 	border: 1px solid #d3d3d3;
 	float: left;
 	margin: 15px 0;
 	padding: 4px;
+	width: 60px;
+	height: 60px;
 }
 
 .commentDate {
@@ -421,85 +425,55 @@ h2 { margin-top: 5px; }
 
 /* -------------------------------------------------------------------------------------
  *
- * Full page
- *
- */
- 
-#full_page {
-	background: #fff;
-	border: 1px solid #d6d6d6;
-	padding: 15px;
-	font-size: 15px;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
-} 
-
-/* -------------------------------------------------------------------------------------
- *
- * Portfolio
- *
- */
-
-.portfolio_col {
-	background: #fff;
-	border: 1px solid #d6d6d6;
-	padding: 10px;
-	margin: 0 10px 20px 0;
-	width: 278px;
-	font-size: 15px;
-	float: left;
-}
-
-.portfolio_col h2 {
-	font-size: 25px;
-}
-
-.image-box {
-	padding: 2px;
-	border: 1px solid #e4e4e4;
-	margin-bottom: 10px;
-	height: 85px;
-	width: 272px;
-	background: #fff;
-}
-
-.portfolio_col:nth-child(3n) {
-	margin-right: 0;
-}
-
-/* -------------------------------------------------------------------------------------
- *
  * Sidebar
  *
  */
+ 
+aside ul, #calendar_wrap {
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	padding: 15px;
+	-moz-box-shadow: 5px 5px 10px #CCCCCC;
+	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
+	margin-bottom: 22px;
+} 
 
 aside li {
 	display: block;
-	margin: 10px 0 20px;
+	margin: 10px 0 10px;
+	background: url('img/arrow.jpg') no-repeat;
+	padding-left: 15px;
 }
 
 aside li:first-child {
 	margin-top: 0;
 }
 
-aside li ul li {
-	margin-left: 10px;
-	margin-bottom: 10px;
-}
-
 aside li:last-child {
 	border-bottom: none;
+	margin-bottom: 0;
 }
 
 aside .widgettitle {
-	font-size: 21px;
-	border-bottom: 2px solid #10729C;
-	margin-bottom: 8px;
+	font-size: 20px;
+	margin: 0 0 0 2px;
 }
 
 #wp-calendar caption {
 	background: #10729C;
 	color: #fff;
 	padding: 4px 0;
-	margin: 5px;
+	margin-bottom: 5px;
+}
+
+#wp-calendar {
+	width: 250px;
+}
+
+#wp-calendar td {
+	text-align: center;
+}
+
+#wp-calendar #prev a{
+	text-align: left;
 }

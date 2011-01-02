@@ -9,9 +9,9 @@
 				<span class="postInfo">Posted on <?php the_time('F j, Y'); ?> at <?php the_time(); ?></span>
 				
 				<?php the_content(); ?>
-			</article>
 			
 			<?php comments_template(); ?>
+			</article>
 			</section>
 
 	<?php get_sidebar(); ?>
