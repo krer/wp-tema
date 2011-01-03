@@ -1,7 +1,11 @@
 <?php
 
-if ( function_exists('register_sidebars') )
-	register_sidebars();
+if ( function_exists('register_sidebar') ) {
+	register_sidebar(array(
+			'before_title' => '<h3 class="widgettitle">', 
+			'after_title' => '</h3>',
+	));
+}
 
 function truecolor_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
@@ -58,6 +62,7 @@ if (function_exists('register_nav_menus')) {
 function new_excerpt_length($length) {
 	return 40;
 }
+
 add_filter('excerpt_length', 'new_excerpt_length');
 
 function is_type_page() { // Check if the current post is a page

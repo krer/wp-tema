@@ -98,7 +98,7 @@ h2 {
 
 h3 {
 	margin: 5px 0;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 h1, h2, h3 {
@@ -441,8 +441,6 @@ aside ul, #calendar_wrap {
 aside li {
 	display: block;
 	margin: 10px 0 10px;
-	background: url('img/arrow.jpg') no-repeat;
-	padding-left: 15px;
 }
 
 aside li:first-child {
@@ -455,7 +453,6 @@ aside li:last-child {
 }
 
 aside .widgettitle {
-	font-size: 20px;
 	margin: 0 0 0 2px;
 }
 
