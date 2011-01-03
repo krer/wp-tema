@@ -14,5 +14,5 @@
 				</ul>
 		<?php endif; ?>
 </aside>
-		<div class="clear"></div>
+	<div class="clear"></div>
 </section>
