@@ -296,6 +296,7 @@ aside {
 	float: left;
 	-moz-box-shadow: 2px 2px 4px #bcbcbc;
 	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	box-shadow: 2px 2px 4px #bcbcbc;
 }
 
 .post_snippet time {
@@ -469,6 +470,7 @@ aside {
 	width: 590px;
 	-moz-box-shadow: 2px 2px 4px #bcbcbc;
 	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	box-shadow: 2px 2px 4px #bcbcbc;
 	position: relative;
 }
 
@@ -505,6 +507,7 @@ aside ul ul, #calendar_wrap {
 	padding: 15px;
 	-moz-box-shadow: 2px 2px 4px #bcbcbc;
 	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	box-shadow: 2px 2px 4px #bcbcbc;
 	margin-bottom: 22px;
 } 
 
