@@ -4,15 +4,15 @@
 	<section id="posts">
 		<?php the_post(); ?>
 
-			<article id="single_post">	
-				<h2><?php the_title(); ?></h2>				
-				<span class="postInfo">Posted on <?php the_time('F j, Y'); ?> at <?php the_time(); ?></span>
+		<article id="single_post">	
+			<h2><?php the_title(); ?></h2>				
+			<time><?php the_time('M j, Y'); ?></time>
 				
-				<?php the_content(); ?>
+			<?php the_content(); ?>
 			
 			<?php comments_template(); ?>
-			</article>
-			</section>
+		</article>
+	</section>
 
 	<?php get_sidebar(); ?>
 <?php get_footer(); ?>

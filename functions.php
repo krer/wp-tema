@@ -60,7 +60,7 @@ if (function_exists('register_nav_menus')) {
 }
 
 function new_excerpt_length($length) {
-	return 40;
+	return 45;
 }
 
 add_filter('excerpt_length', 'new_excerpt_length');

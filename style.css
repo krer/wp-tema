@@ -1,8 +1,8 @@
 /*
-Theme Name: Truecolors
+Theme Name: True colors
 Theme URI:
 Description: A wordpress theme for themeforest.net
-Version: 1
+Version: 1.0
 Author: Kristoffer Eriksson
 Author URI:
 Tags: Colors, nice, good
@@ -40,8 +40,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
  */
 
 body {
-	font-family: "Hoefler Text", Arial, serif;
+	font-family: "Myriad pro", "Helvetica Neue", Helvetica, serif;
 	background: url('img/bg.jpg');
+	color: #333;
+	font-size: 14px;
 }
 
 input, textarea {
@@ -55,7 +57,7 @@ a {
 }
 
 p {
-	margin: 8px 0 0;
+	margin: 0 0 10px;
 	line-height: 24px;
 }
 
@@ -92,8 +94,6 @@ h2, h3 {
 
 h2 {
 	font-size: 26px;
-	margin-bottom: 5px;
-	margin-top: 5px; 
 }
 
 h3 {
@@ -122,7 +122,6 @@ header {
 
 nav {
 	background: #10729C;
-	font-size: 14px;
 	position: relative;
 	height: 60px;
 	text-align: left;
@@ -166,6 +165,7 @@ nav ul {
 nav li {
 	display: inline;
 	margin-left: 20px;
+	position: relative;
 }
 
 nav li:first-child { margin-left: 0; }
@@ -175,6 +175,7 @@ nav li a {
 	letter-spacing: 1px;
 	line-height: 62px;
 	text-decoration: none;
+	display: inline-block;
 }
 
 nav li a:hover { text-decoration: underline; }
@@ -205,6 +206,46 @@ nav li a:hover { text-decoration: underline; }
 
 .screen-reader-text { display: none; }
 
+nav ul ul {
+	-moz-border-radius: 3px;
+    background: #fff;
+    border: 1px solid #10729C;
+    padding: 5px 15px;
+  	display: none;
+    width: 120px;
+    margin-left: 0;
+    position: absolute;
+	left: -1px;
+	top: 100%;
+	margin: 5px 0 0;
+	z-index: 100;
+}
+
+nav li:hover > ul{
+	display: block;
+}
+
+nav li ul li{
+	display: block;
+	margin-left: 0;
+}
+
+nav li ul li a {
+	color: #777;
+	text-transform: none;
+	width: 100%;
+	line-height: 35px;
+	font-size: 13px;
+	font-weight: 100;
+	border-bottom: 1px solid #ccc;
+	text-decoration: none;
+}
+
+nav li ul li a:hover {
+	color: #333;
+	text-decoration: none;
+}
+
 /* -------------------------------------------------------------------------------------
  *
  * Content
@@ -213,13 +254,12 @@ nav li a:hover { text-decoration: underline; }
 
 #posts {
 	float: left;
-	width: 638px;
-	font-size: 18px;
+	width: 623px;
+	margin-right: 15px;
 }
 
 aside {
 	float: left;
-	font-size: 14px;
 	width: 282px;
 }
 
@@ -233,14 +273,29 @@ aside {
 	background: #fff;
 	border: 1px solid #d6d6d6;
 	padding: 15px;
-	margin: 0 10px 20px 0;
-	width: 590px;
-	font-size: 15px;
+	margin-bottom: 20px;
+	width: 591px;
 	position: relative;
 	overflow: hidden;
 	float: left;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
+	-moz-box-shadow: 2px 2px 4px #bcbcbc;
+	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+}
+
+.post_snippet time {
+	position: absolute;
+	top: 19px;
+	right: 15px;
+	border: 1px solid #e4e4e4;
+	padding: 6px 6px 4px;
+}
+
+.post_snippet p {
+	margin: 0;
+}
+
+.post_snippet h2 {
+	margin: 5px 0;
 }
 
 .thumb_image {
@@ -258,16 +313,10 @@ aside {
 	height: 190px;
 }
 
-.postmetadata {
-	position: absolute;
-	top: 25px;
-	right: 15px;
-	color: #777;
-}
-
 .read_more {
-	display: block;
-	float: right;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 	color: #10729C;
 }
 
@@ -402,27 +451,30 @@ aside {
 	padding: 15px;
 	margin-bottom: 20px;
 	width: 590px;
-	font-size: 15px;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
+	-moz-box-shadow: 2px 2px 4px #bcbcbc;
+	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	position: relative;
+}
+
+#single_post time {
+	position: absolute;
+	top: 14px;
+	right: 15px;
+	border: 1px solid #e4e4e4;
+	padding: 6px 6px 4px;
 }
 
 #single_post img {
 	width: 190px;
 	height: 190px;
+	float: left;
 	margin: 4px 10px 10px 0;
 	padding: 2px;
 	border: 1px solid #e4e4e4;
-	float: left;
 }
 
 #single_post h2 {
-	margin-bottom: 0;
-}
-
-.postInfo {
-	font-size: 13px;
-	color: #10729C;
+	margin-bottom: 5px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -431,18 +483,18 @@ aside {
  *
  */
  
-aside ul, #calendar_wrap {
+aside ul ul, #calendar_wrap {
 	background: #fff;
 	border: 1px solid #d6d6d6;
 	padding: 15px;
-	-moz-box-shadow: 5px 5px 10px #CCCCCC;
-	-webkit-box-shadow: 5px 5px 10px #CCCCCC;
+	-moz-box-shadow: 2px 2px 4px #bcbcbc;
+	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
 	margin-bottom: 22px;
 } 
 
-aside li {
+aside li li {
 	display: block;
-	margin: 10px 0 10px;
+	margin: 7px 0 7px;
 }
 
 aside li:first-child {
@@ -452,6 +504,12 @@ aside li:first-child {
 aside li:last-child {
 	border-bottom: none;
 	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+aside li li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 6px;
 }
 
 aside .widgettitle {

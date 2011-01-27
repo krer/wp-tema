@@ -13,9 +13,7 @@
 							
 					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					
-					<span class="postmetadata">
-						<?php the_time('F j, Y') ?>
-					</span>	
+					<time><?php the_time('M j, Y'); ?></time>
 				
 				<?php the_excerpt(); ?>
 							
