@@ -186,17 +186,20 @@ nav li a:hover {
 	-moz-border-radius: 3px;
 }
 
-#searchform { position: absolute; right: 20px; top: 17px; }
+#searchform { 
+	position: absolute; 
+	right: 20px; 
+	top: 17px;
+	background: url('img/search-box.png') no-repeat;
+}
 
-#searchform #s { 
-	width: 215px;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-    border: 1px solid #BFBFBF;
-    float: left;
-    margin-right: 5px;
-    padding: 4px 0 4px 4px;
-    -webkit-appearance: none;
+#s { 
+	background: transparent;
+    border: medium none;
+    font-size: 12px;
+    margin: 0 2px 0 0;
+    padding: 0 5px 0 23px;
+    width: 158px;
 }
 
 #searchsubmit{
@@ -209,8 +212,6 @@ nav li a:hover {
     padding: 5px;
     text-transform: uppercase;
 }
-
-.screen-reader-text { display: none; }
 
 nav ul ul {
 	-webkit-border-radius: 3px;
