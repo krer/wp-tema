@@ -158,13 +158,12 @@ header h1 {
 
 nav ul {
 	font-weight: 700;
-	margin-left: 22px;
+	margin-left: 12px;
 	text-transform: uppercase;
 }
 
 nav li {
 	display: inline;
-	margin-left: 20px;
 	position: relative;
 }
 
@@ -173,12 +172,19 @@ nav li:first-child { margin-left: 0; }
 nav li a {
 	color: #fff;
 	letter-spacing: 1px;
-	line-height: 62px;
+	margin-top: 13px;
 	text-decoration: none;
 	display: inline-block;
+	padding: 10px 10px 5px;
 }
 
-nav li a:hover { text-decoration: underline; }
+nav li a:hover { 
+	background: #fff;
+	border: 1px solid #10729c;
+	color: #333;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
 
 #searchform { position: absolute; right: 20px; top: 17px; }
 
@@ -207,17 +213,18 @@ nav li a:hover { text-decoration: underline; }
 .screen-reader-text { display: none; }
 
 nav ul ul {
+	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
     background: #fff;
     border: 1px solid #10729C;
-    padding: 5px 15px;
+    padding: 2px 10px;
   	display: none;
     width: 120px;
     margin-left: 0;
     position: absolute;
-	left: -1px;
+	left: 0;
 	top: 100%;
-	margin: 5px 0 0;
+	margin: 6px 0 0;
 	z-index: 100;
 }
 
@@ -231,7 +238,7 @@ nav li ul li{
 }
 
 nav li ul li a {
-	color: #777;
+	color: #333;
 	text-transform: none;
 	width: 100%;
 	line-height: 35px;
@@ -239,12 +246,21 @@ nav li ul li a {
 	font-weight: 100;
 	border-bottom: 1px solid #ccc;
 	text-decoration: none;
+	margin-top: 0;
+	padding: 0;
 }
 
 nav li ul li a:hover {
-	color: #333;
+	color: #10729C;
 	text-decoration: none;
+	border: none;
+	border-bottom: 1px solid #ccc;
 }
+
+nav li ul li:last-child a {
+	border-bottom: none;
+}
+
 
 /* -------------------------------------------------------------------------------------
  *
