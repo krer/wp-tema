@@ -20,8 +20,6 @@
 			</article>
 		<?php endwhile; ?>
 					
-			<p><?php previous_posts_link('Previous entries'); ?><?php next_posts_link('Older entries');?></p>
-					
 		<?php else : ?>
 			<h3>Not found</h3>	
 		<?php endif; ?>

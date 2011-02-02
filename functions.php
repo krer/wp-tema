@@ -11,11 +11,11 @@ function truecolor_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
    	<div id="comment-<?php comment_ID(); ?>"> 
-		<?php if ($comment -> comment_approved ='0') : ?>
+		<?php if ($comment->comment_approved == '0') : ?>
 			<p>Your comment is awaiting approval</p>
 		<?php endif; ?>
 				
-		<?php echo get_avatar(get_the_author_email(), 60); ?>
+		<?php echo get_avatar($comment, 60); ?>
 			
 		<div class="comment-text">  
 			<cite><?php comment_author(); ?></cite>        
