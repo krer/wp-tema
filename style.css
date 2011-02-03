@@ -158,20 +158,20 @@ header h1 {
  *
  */
 
-header nav ul {
+nav ul {
 	font-weight: 700;
 	margin-left: 12px;
 	text-transform: uppercase;
 }
 
-header nav li {
+nav li {
 	display: inline;
 	position: relative;
 }
 
-header nav li:first-child { margin-left: 0; }
+nav li:first-child { margin-left: 0; }
 
-header nav li a {
+nav li a {
 	color: #fff;
 	letter-spacing: 1px;
 	margin-top: 14px;
@@ -180,7 +180,7 @@ header nav li a {
 	padding: 9px 10px 5px;
 }
 
-header nav li a:hover { 
+nav li a:hover { 
 	background: #fff;
 	border: 1px solid #10729c;
 	color: #333;
@@ -215,7 +215,7 @@ header nav li a:hover {
     text-transform: uppercase;
 }
 
-header nav ul ul {
+nav ul ul {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
     background: #fff;
@@ -231,16 +231,16 @@ header nav ul ul {
 	z-index: 100;
 }
 
-header nav li:hover > ul{
+nav li:hover > ul{
 	display: block;
 }
 
-header nav li ul li{
+nav li ul li{
 	display: block;
 	margin-left: 0;
 }
 
-header nav li ul li a {
+nav li ul li a {
 	color: #333;
 	text-transform: none;
 	width: 100%;
@@ -253,14 +253,14 @@ header nav li ul li a {
 	padding: 0;
 }
 
-header nav li ul li a:hover {
+nav li ul li a:hover {
 	color: #10729C;
 	text-decoration: none;
 	border: none;
 	border-bottom: 1px solid #ccc;
 }
 
-header nav li ul li:last-child a {
+nav li ul li:last-child a {
 	border-bottom: none;
 }
 
