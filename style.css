@@ -354,7 +354,7 @@ aside .widgettitle {
  *
  */
 
-.post_snippet {
+.blogpost {
 	background: #fff;
 	border: 1px solid #d6d6d6;
 	padding: 15px;
@@ -368,7 +368,7 @@ aside .widgettitle {
 	box-shadow: 2px 2px 4px #bcbcbc;
 }
 
-.post_snippet time {
+.blogpost time {
 	position: absolute;
 	top: 19px;
 	right: 15px;
@@ -376,11 +376,11 @@ aside .widgettitle {
 	padding: 6px 6px 4px;
 }
 
-.post_snippet p {
+.blogpost p {
 	margin: 0;
 }
 
-.post_snippet h2 {
+.blogpost h2 {
 	margin: 5px 0;
 }
 

@@ -5,7 +5,7 @@
 				
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					
-			<article class="post_snippet">
+			<article class="blogpost">
 				
 				<?php if ( has_post_thumbnail() ) { ?>
 					<div class="thumb_image"><?php the_post_thumbnail(); ?></div>

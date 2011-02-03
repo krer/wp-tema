@@ -6,7 +6,7 @@
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 		<?php if (is_type_page()) continue; ?>
 					
-			<article class="post_snippet">
+			<article class="blogpost">
 				
 				<?php if ( has_post_thumbnail() ) { ?>
 					<div class="thumb_image"><?php the_post_thumbnail(); ?></div>
@@ -24,7 +24,7 @@
 			<p><?php previous_posts_link('Previous entries'); ?><?php next_posts_link('Older entries');?></p>
 					
 		<?php else : ?>
-			<h3>Not found</h3>	
+			<?php include_once(TEMPLATEPATH."/page-error.php"); ?>
 		<?php endif; ?>
 	</section>
 			
