@@ -120,7 +120,7 @@ header {
 	text-align: center;
 }
 
-nav {
+header nav {
 	background: #10729C;
 	position: relative;
 	height: 60px;
@@ -137,7 +137,9 @@ nav {
 }
 
 footer {
-	padding: 0 20px 20px;
+	padding: 0 25px;
+	height: 20px;
+	margin-bottom: 20px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -156,20 +158,20 @@ header h1 {
  *
  */
 
-nav ul {
+header nav ul {
 	font-weight: 700;
 	margin-left: 12px;
 	text-transform: uppercase;
 }
 
-nav li {
+header nav li {
 	display: inline;
 	position: relative;
 }
 
-nav li:first-child { margin-left: 0; }
+header nav li:first-child { margin-left: 0; }
 
-nav li a {
+header nav li a {
 	color: #fff;
 	letter-spacing: 1px;
 	margin-top: 14px;
@@ -178,7 +180,7 @@ nav li a {
 	padding: 9px 10px 5px;
 }
 
-nav li a:hover { 
+header nav li a:hover { 
 	background: #fff;
 	border: 1px solid #10729c;
 	color: #333;
@@ -213,7 +215,7 @@ nav li a:hover {
     text-transform: uppercase;
 }
 
-nav ul ul {
+header nav ul ul {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
     background: #fff;
@@ -229,16 +231,16 @@ nav ul ul {
 	z-index: 100;
 }
 
-nav li:hover > ul{
+header nav li:hover > ul{
 	display: block;
 }
 
-nav li ul li{
+header nav li ul li{
 	display: block;
 	margin-left: 0;
 }
 
-nav li ul li a {
+header nav li ul li a {
 	color: #333;
 	text-transform: none;
 	width: 100%;
@@ -251,14 +253,14 @@ nav li ul li a {
 	padding: 0;
 }
 
-nav li ul li a:hover {
+header nav li ul li a:hover {
 	color: #10729C;
 	text-decoration: none;
 	border: none;
 	border-bottom: 1px solid #ccc;
 }
 
-nav li ul li:last-child a {
+header nav li ul li:last-child a {
 	border-bottom: none;
 }
 
@@ -279,6 +281,72 @@ aside {
 	float: left;
 	width: 282px;
 }
+
+/* -------------------------------------------------------------------------------------
+ *
+ * Sidebar
+ *
+ */
+ 
+aside ul ul, #calendar_wrap {
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	padding: 15px;
+	-moz-box-shadow: 2px 2px 4px #bcbcbc;
+	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	box-shadow: 2px 2px 4px #bcbcbc;
+	margin-bottom: 22px;
+} 
+
+aside li li {
+	display: block;
+	margin: 7px 0 7px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 6px;
+}
+
+aside li:first-child {
+	margin-top: 0;
+}
+
+aside li:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+aside .widgettitle {
+	margin: 0 0 0 2px;
+}
+
+#wp-calendar caption {
+	background: #10729C;
+	color: #fff;
+	padding: 4px 0;
+	margin-bottom: 5px;
+}
+
+#wp-calendar {
+	width: 250px;
+}
+
+#wp-calendar td {
+	text-align: center;
+}
+
+#wp-calendar #prev a{
+	text-align: left;
+}
+
+#social li {
+	text-align: center;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+#social li a {
+	margin-right: 2px;
+	display: inline;
+} 
 
 /* -------------------------------------------------------------------------------------
  *
@@ -494,60 +562,4 @@ aside {
 
 #single_post h2 {
 	margin-bottom: 15px;
-}
-
-/* -------------------------------------------------------------------------------------
- *
- * Sidebar
- *
- */
- 
-aside ul ul, #calendar_wrap {
-	background: #fff;
-	border: 1px solid #d6d6d6;
-	padding: 15px;
-	-moz-box-shadow: 2px 2px 4px #bcbcbc;
-	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
-	box-shadow: 2px 2px 4px #bcbcbc;
-	margin-bottom: 22px;
-} 
-
-aside li li {
-	display: block;
-	margin: 7px 0 7px;
-	border-bottom: 1px solid #ccc;
-	padding-bottom: 6px;
-}
-
-aside li:first-child {
-	margin-top: 0;
-}
-
-aside li:last-child {
-	border-bottom: none;
-	margin-bottom: 0;
-	padding-bottom: 0;
-}
-
-aside .widgettitle {
-	margin: 0 0 0 2px;
-}
-
-#wp-calendar caption {
-	background: #10729C;
-	color: #fff;
-	padding: 4px 0;
-	margin-bottom: 5px;
-}
-
-#wp-calendar {
-	width: 250px;
-}
-
-#wp-calendar td {
-	text-align: center;
-}
-
-#wp-calendar #prev a{
-	text-align: left;
 }

@@ -1,5 +1,15 @@
 <aside>
 	<ul>
+		<li>
+			<ul id="social">
+				<li>
+					<a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/rss.png"></a>
+					<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.png"></a>
+					<a href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.png"></a>
+				</li>
+			</ul>
+		</li>
+
 <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar()) : ?>
 		<li>
 			<h3 class="widgettitle">Archives</h3>
