@@ -6,6 +6,8 @@
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo('rss2_url'); ?>">
+		 <link rel="alternate" type="application/rss+xml" title="RSS Comments Feed" href="<?php bloginfo('comments_rss2_url'); ?>">
 		<link rel="stylesheet" href='<?php bloginfo('stylesheet_url'); ?>'>
 		<link rel="pingback" href='<?php bloginfo( 'pingback_url' ); ?>'>
 		<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>

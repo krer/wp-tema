@@ -1,12 +1,15 @@
 <?php
 
+/* Register Widgets */
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
+			'name' => 'Sidebar Widget',
 			'before_title' => '<h3 class="widgettitle">', 
 			'after_title' => '</h3>',
 	));
 }
 
+/* Add comments */
 function truecolor_comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -29,6 +32,7 @@ function truecolor_comment($comment, $args, $depth) {
 	</div> 
 <?php } 
 
+/* Read more directs to top of the post */
 function remove_more_jump_link($link) { 
 	$offset = strpos($link, '#more-');
 	if ($offset) {
@@ -43,6 +47,7 @@ function remove_more_jump_link($link) {
 
 add_filter('the_content_more_link', 'remove_more_jump_link');
 
+/* Read more link */
 function new_excerpt_more($more) {
        global $post;
 	return '...</p><a href="'.get_permalink().'" class="read_more">Read more</a>';
@@ -50,29 +55,24 @@ function new_excerpt_more($more) {
 
 add_filter('excerpt_more', 'new_excerpt_more');
 
+/* Add thumbnail support */
 add_theme_support('post-thumbnails');
 
-
+/* Add support for custom menus */
 if (function_exists('register_nav_menus')) {
 	register_nav_menus( array(
 			'main_nav' => 'Main Navigation Menu'
 	));
 }
 
+/* New excerpt length */
 function new_excerpt_length($length) {
 	return 45;
 }
 
 add_filter('excerpt_length', 'new_excerpt_length');
 
-function is_type_page() { // Check if the current post is a page
-	global $post;
-
-	if ($post->post_type == 'page') {
-		return true;
-	} else {
-		return false;
-	}
-}
+/* Include Admin Option Panel File */
+include(TEMPLATEPATH . "/admin/index.php");
 
 ?>

@@ -362,7 +362,6 @@ aside .widgettitle {
 	width: 591px;
 	position: relative;
 	overflow: hidden;
-	float: left;
 	-moz-box-shadow: 2px 2px 4px #bcbcbc;
 	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
 	box-shadow: 2px 2px 4px #bcbcbc;
@@ -405,6 +404,24 @@ aside .widgettitle {
 	right: 15px;
 	color: #10729C;
 }
+
+#navigation { 
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	padding: 15px 15px 12px;
+	margin-bottom: 20px;
+	width: 591px;
+	position: relative;
+	overflow: hidden;
+	-moz-box-shadow: 2px 2px 4px #bcbcbc;
+	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
+	box-shadow: 2px 2px 4px #bcbcbc;
+	font-size: 15px;
+}
+
+.alignleft { float: left; }
+
+.alignright { float: right; }
 
 /* -------------------------------------------------------------------------------------
  *
@@ -562,4 +579,8 @@ aside .widgettitle {
 
 #single_post h2 {
 	margin-bottom: 15px;
+}
+
+#single_post p:last-child {
+	margin-bottom: 0;
 }

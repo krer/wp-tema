@@ -4,8 +4,8 @@
 			<ul id="social">
 				<li>
 					<a href="<?php bloginfo('rss2_url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/rss.png"></a>
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
+					<a href="http://www.facebook.com/<?php echo get_option('tc_facebook_name'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/facebook.png"></a>
+					<a href="http://www.twitter.com/<?php echo get_option('tc_twitter_name'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/twitter.png"></a>
 				</li>
 			</ul>
 		</li>

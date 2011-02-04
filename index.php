@@ -20,10 +20,13 @@
 			</article>
 		<?php endwhile; ?>
 					
-			<p><?php previous_posts_link('Previous entries'); ?><?php next_posts_link('Older entries');?></p>
+			<section id="navigation">
+				<span class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></span>
+				<span class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
+			</section>
 					
 		<?php else : ?>
-			<h3>Not found</h3>	
+			<?php include_once(TEMPLATEPATH."/page-error.php"); ?>
 		<?php endif; ?>
 	</section>
 			
