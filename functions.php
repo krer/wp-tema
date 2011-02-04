@@ -72,6 +72,20 @@ function new_excerpt_length($length) {
 
 add_filter('excerpt_length', 'new_excerpt_length');
 
+/* Get the Category ID */
+function get_category_id($cat_name) {
+	$categories = get_categories();
+	foreach($categories as $category){ //loop through categories
+		if($category->name == $cat_name){
+			$cat_id = $category->term_id;
+			break;
+		}
+	}
+
+	if (empty($cat_id)) { return 0; }
+			return $cat_id;
+}
+
 /* Include Admin Option Panel File */
 include(TEMPLATEPATH . "/admin/index.php");
 

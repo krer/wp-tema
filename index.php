@@ -2,6 +2,9 @@
 
 <section id="content">
 	<section id="posts">
+	
+		<?php $category_id = get_option('tc_portfolio_exclude') ? get_category_id('Portfolio') : "" ; ?>
+		<?php query_posts('&cat=-' . $category_id) ?>
 				
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					
@@ -18,6 +21,7 @@
 				<?php the_excerpt(); ?>
 							
 			</article>
+
 		<?php endwhile; ?>
 					
 			<section id="navigation">
