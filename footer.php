@@ -1,9 +1,28 @@
-<footer>
-	&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.
+<?php
+/*
+ * The template for displaying the footer.
+ *
+ * Contains the clearfix and closing of the content section and all content
+ * after.
+ */
+?>
 
-<?php wp_footer(); ?>	
+		<div class="clear"></div>
+	</section><!-- #content -->
+
+	<footer>
+		<?php 
+			if(get_option('tc_copytext')) :
+				echo get_option('tc_copytext');
+			else :
+		?>
+ 				&copy; <?php echo date('Y'); ?> <?php bloginfo('name');
+			endif;
+
+		wp_footer(); 
+		?>	
 			
-</footer>
-</div>
+	</footer><!-- footer -->
+</div><!-- #page-wrap -->
 </body>
 </html>

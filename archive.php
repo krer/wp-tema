@@ -1,29 +1,40 @@
-<?php get_header(); ?>
+<?php 
+/*
+ * The template for displaying Archive pages.
+ */
 
-<section id="content">
+get_header(); ?>
+
 	<section id="posts">
-				
+		
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					
 			<article class="blogpost">
-				
-				<?php if ( has_post_thumbnail() ) { ?>
-					<div class="thumb_image"><?php the_post_thumbnail(); ?></div>
-				<?php } ?>
 							
+				<div class="thumb-box">
+					<?php the_post_thumbnail(); ?>
+				</div>
+							
+				<div class="post-text">
 					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					
-					<time><?php the_time('M j, Y'); ?></time>
+					<div class="post-details">
+						<time><?php the_time('M j, Y'); ?></time>
+						<span class="cat-details">Posted in: <?php echo get_the_category_list( ', ' ); ?></span>
+						<span class="comment-details"><?php comments_popup_link('No comments', '1 comment', '% Comments'); ?></span>
+					</div>
 				
-				<?php the_excerpt(); ?>
-							
+					<?php the_excerpt(); ?>
+				</div>								
 			</article>
-		<?php endwhile; ?>
-					
-		<?php else : ?>
-			<h3>Not found</h3>	
-		<?php endif; ?>
+			
+		<?php endwhile;	
+			else :
+				include_once(TEMPLATEPATH."/page-error.php");
+			endif; ?>
 	</section>
 			
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php 
+		get_sidebar();
+	get_footer(); 
+?>

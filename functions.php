@@ -1,38 +1,97 @@
 <?php
+/**
+ * True colors functions and definitions
+ */
 
-/* Register Widgets */
+/** Tell WordPress to run tc_setup() when the 'after_setup_theme' hook is run. */
+add_action( 'after_setup_theme', 'tc_setup' );
+ 
+if ( ! function_exists( 'tc_setup' ) ) :
+	/** Sets up theme defaults and registers support for various WordPress features. */
+	function tc_setup() {
+		
+		// This theme uses post thumbnails.
+		add_theme_support( 'post-thumbnails' );
+		
+		// The default size. Larger images will be auto-cropped to fit.
+		set_post_thumbnail_size( 190, 190, true );
+		
+		// The portfolio size. Larger images will be auto-cropped to fit.
+		add_image_size( 'gallery', 268, 168, true );
+
+		// Add default posts and comments RSS feed links to head
+		add_theme_support( 'automatic-feed-links' );
+
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'primary' =>  'Primary Navigation'
+		) );
+	}
+endif;
+
+/** Always show a home link. */
+function page_menu_args( $args ) {
+	$args['show_home'] = true;
+	return $args;
+}
+add_filter( 'wp_page_menu_args', 'page_menu_args' );
+
+/** Sets the post excerpt length to 35 characters. */
+function excerpt_length($length) {
+	return 34;
+}
+add_filter('excerpt_length', 'excerpt_length'); 
+ 
+/** Returns a "Read more" link for excerpts */
+function excerpt_more($more) {
+       global $post;
+	return '...</p><a href="'.get_permalink().'" class="read_more">Read more</a>';
+}
+add_filter('excerpt_more', 'excerpt_more');
+
+/** Register widgetized sidebar. */
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-			'name' => 'Sidebar Widget',
+			'name' => 'Sidebar',
+			'description'   => 'These are widgets for the sidebar',
+			'before_widget' => '<li>', 
+			'after_widget' => '</li>',
 			'before_title' => '<h3 class="widgettitle">', 
 			'after_title' => '</h3>',
 	));
 }
 
-/* Add comments */
-function truecolor_comment($comment, $args, $depth) {
+/**
+ * Template for comments.
+ *
+ * Used as a callback by wp_list_comments() for displaying the comments.
+ */
+function comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
    	<div id="comment-<?php comment_ID(); ?>"> 
-		<?php if ($comment->comment_approved == '0') : ?>
-			<p>Your comment is awaiting approval</p>
-		<?php endif; ?>
-				
-		<?php echo get_avatar($comment, 60); ?>
+		<div class="image">		
+			<?php echo get_avatar($comment, 60); ?>
+		</div>
 			
-		<div class="comment-text">  
-			<cite><?php comment_author(); ?></cite>        
-			<span class="commentDate"> <?php comment_date('M j, Y'); ?></span>
-			<?php comment_text(); ?>
-						
-            <div class="commentEdit"><?php edit_comment_link('Edit', '', ''); ?>
+		<div class="details"> 
+			<div class="name">
+				<span class="author"><?php comment_author(); ?></span>
+				<span class="date"><?php comment_date('F j, Y'); ?> ·
      			<?php comment_reply_link(array_merge($args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+     			</span>
      		</div>
+     		
+     		<?php if ($comment->comment_approved == '0') : ?>
+				<p>Your comment is awaiting approval</p>
+			<?php endif; ?>
+     		
+			<?php comment_text(); ?>
 		</div>
 	</div> 
 <?php } 
 
-/* Read more directs to top of the post */
+/** Read more directs to the top of the post */
 function remove_more_jump_link($link) { 
 	$offset = strpos($link, '#more-');
 	if ($offset) {
@@ -44,49 +103,44 @@ function remove_more_jump_link($link) {
 	}
 	return $link;
 }
-
 add_filter('the_content_more_link', 'remove_more_jump_link');
 
-/* Read more link */
-function new_excerpt_more($more) {
-       global $post;
-	return '...</p><a href="'.get_permalink().'" class="read_more">Read more</a>';
-}
-
-add_filter('excerpt_more', 'new_excerpt_more');
-
-/* Add thumbnail support */
-add_theme_support('post-thumbnails');
-
-/* Add support for custom menus */
-if (function_exists('register_nav_menus')) {
-	register_nav_menus( array(
-			'main_nav' => 'Main Navigation Menu'
-	));
-}
-
-/* New excerpt length */
-function new_excerpt_length($length) {
-	return 45;
-}
-
-add_filter('excerpt_length', 'new_excerpt_length');
-
-/* Get the Category ID */
-function get_category_id($cat_name) {
-	$categories = get_categories();
-	foreach($categories as $category){ //loop through categories
-		if($category->name == $cat_name){
-			$cat_id = $category->term_id;
-			break;
-		}
+/** Search only pages */
+function is_type_page() {
+	global $post;
+	if ($post->post_type == ‘page’) {
+		return true;
+	} else {
+		return false;
 	}
-
-	if (empty($cat_id)) { return 0; }
-			return $cat_id;
 }
 
-/* Include Admin Option Panel File */
+/** Create a portfolio post type */
+function post_type_gallery() {
+	register_post_type( 'gallery',
+		array(
+			'labels' => array(
+				'name' => 'Gallery',
+				'singular_name' => 'Gallery Item',
+				'add_new' => 'Add New', 'Gallery Item',
+    			'add_new_item' => 'Add New Gallery Item',
+    			'edit_item' => 'Edit Gallery Item',
+    			'new_item' => 'New Gallery Item',
+    			'view_item' => 'View Gallery Item',
+    			'search_items' => 'Search Gallery Items',
+    			'not_found' =>  'No Gallery Items found',
+    			'not_found_in_trash' => 'No Gallery Items found in Trash', 
+			),
+		'public' => true,
+        'menu_position' => 5,
+        'rewrite' => array('slug' => '','with_front' => false),
+        'supports' => array('title', 'custom-fields', 'thumbnail')
+		)
+	);
+}
+add_action( 'init', 'post_type_gallery' );
+
+/** Include Admin Option Panel File */
 include(TEMPLATEPATH . "/admin/index.php");
 
 ?>

@@ -1,38 +1,54 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The main template file.
+ */
 
-<section id="content">
+get_header(); ?>
+
 	<section id="posts">
-	
-		<?php $category_id = get_option('tc_portfolio_exclude') ? get_category_id('Portfolio') : "" ; ?>
-		<?php query_posts('&cat=-' . $category_id) ?>
 				
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					
 			<article class="blogpost">
 				
-				<?php if ( has_post_thumbnail() ) { ?>
-					<div class="thumb_image"><?php the_post_thumbnail(); ?></div>
-				<?php } ?>
+					<div class="thumb-box">
+						<?php the_post_thumbnail(); ?>
+					</div><!-- .thumb-box -->
 							
-					<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+					<div class="post-text">
+						<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					
-					<time><?php the_time('M j, Y'); ?></time>
+						<div class="post-details">
+							<time><?php the_time('M j, Y'); ?></time>
+							<span class="cat-details">Posted in: <?php echo get_the_category_list( ', ' ); ?></span>
+							<span class="comment-details"><?php comments_popup_link('No comments', '1 comment', '% comments'); ?></span>
+						</div><!-- .post-details -->
 				
-				<?php the_excerpt(); ?>
-							
-			</article>
+						<?php the_excerpt(); ?>
+					</div><!-- .post-text -->		
+			</article><!-- .blogpost -->
 
-		<?php endwhile; ?>
+			<?php endwhile; ?>
+		
+			<section class="blogpost">
+				<?php 
+					if(function_exists('wp_pagenavi')) :
+            			wp_pagenavi();
+					else :
+				?>
+						<span class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></span>
+						<span class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
+				<?php endif; ?>	
+			</section><!-- .blogpost -->
 					
-			<section id="navigation">
-				<span class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></span>
-				<span class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></span>
-			</section>
-					
-		<?php else : ?>
-			<?php include_once(TEMPLATEPATH."/page-error.php"); ?>
-		<?php endif; ?>
-	</section>
+		<?php 
+			else :
+				include_once(TEMPLATEPATH."/page-error.php");
+			endif; 
+		?>
+	</section><!-- #posts -->
 			
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php 
+		get_sidebar();
+	get_footer(); 
+?>

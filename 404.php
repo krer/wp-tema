@@ -1,9 +1,15 @@
-<?php get_header(); ?>
+<?php 
+/*
+ * The template for displaying 404 pages (Not Found).
+ *
+ */
 
-<section id="content">
+get_header();
 	
-	<?php include_once(TEMPLATEPATH."/page-error.php"); ?>
+include_once(TEMPLATEPATH . "/page-error.php");
 		
-<?php get_sidebar(); ?>
+get_sidebar();
 
-<?php get_footer(); ?>
+get_footer();
+
+?>

@@ -1,6 +1,12 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The template for displaying all pages.
+ *
+ * This is the template that displays all pages by default.
+ */
 
-<section id="content">
+get_header(); ?>
+
 	<section id="posts">
 				
 		<?php the_post(); ?>
@@ -8,8 +14,10 @@
 			<article id="single_post">
 				<h2><?php the_title(); ?></h2>
 							<?php the_content(); ?>						
-			</article>
-	</section>
+			</article><!-- #single_post -->
+	</section><!-- #posts -->
 			
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php 
+		get_sidebar();
+	get_footer(); 
+?>

@@ -1,6 +1,10 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The Template for displaying all single posts.
+ */
+
+get_header(); ?>
 	
-<section id="content">
 	<section id="posts">
 		<?php the_post(); ?>
 
@@ -11,8 +15,10 @@
 			<?php the_content(); ?>
 			
 			<?php comments_template(); ?>
-		</article>
-	</section>
+		</article><!-- #single_post -->
+	</section><!-- #posts -->
 
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+<?php 
+		get_sidebar();
+	get_footer(); 
+?>
