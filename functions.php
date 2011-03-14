@@ -2,13 +2,9 @@
 /**
  * True colors functions and definitions
  */
-
-/** Tell WordPress to run tc_setup() when the 'after_setup_theme' hook is run. */
-add_action( 'after_setup_theme', 'tc_setup' );
  
-if ( ! function_exists( 'tc_setup' ) ) :
-	/** Sets up theme defaults and registers support for various WordPress features. */
-	function tc_setup() {
+/** Theme defaults and support for various features. */
+function tc_setup() {
 		
 		// This theme uses post thumbnails.
 		add_theme_support( 'post-thumbnails' );
@@ -27,7 +23,7 @@ if ( ! function_exists( 'tc_setup' ) ) :
 			'primary' =>  'Primary Navigation'
 		) );
 	}
-endif;
+add_action( 'after_setup_theme', 'tc_setup' );
 
 /** Always show a home link. */
 function page_menu_args( $args ) {
@@ -61,11 +57,7 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-/**
- * Template for comments.
- *
- * Used as a callback by wp_list_comments() for displaying the comments.
- */
+/** The template for displaying the comments. */
 function comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">

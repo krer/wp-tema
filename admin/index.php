@@ -33,7 +33,6 @@ function tc_admin_head() { ?>
 						<h2 id="pagetitle"><?php echo $themename; ?> settings</h2>
 						<?php if ( $_REQUEST['saved'] ) { ?><div style="clear:both;height:20px;"></div><div class="warning"><?php echo $themename; ?>'s options has been updated!</div><?php } ?>
 						<?php if ( $_REQUEST['reset'] ) { ?><div style="clear:both;height:20px;"></div><div class="warning"><?php echo $themename; ?>'s options has been reset!</div><?php } ?>	
-						<!--START: GENERAL SETTINGS-->
      						<table class="maintable">
 							<?php foreach ($options as $value) { ?>
 									<?php if ( $value['type'] <> "heading" ) { ?>
@@ -80,11 +79,8 @@ function tc_admin_head() { ?>
 								<input name="save" type="submit" value="Save changes">    
 								<input type="hidden" name="action" value="save">
 							</p>
-							<div style="clear:both;"></div>
-						<!--END: GENERAL SETTINGS-->
             </form>
-</div><!--wrap-->
-<div style="clear:both;height:20px;"></div>
+</div><!--#tc_wrap-->
  <?php
 }
 	

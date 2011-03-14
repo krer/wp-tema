@@ -1,6 +1,6 @@
 <?php
 /*
- * The template for displaying Comments.
+ * The template for displaying comments.
  */
 ?>
 
@@ -8,10 +8,6 @@
 	<?php if ( post_password_required() ) : ?>
 		<p>This post is password protected!</p>
 	<?php
-		/* Stop the rest of comments.php from being processed,
-		 * but don't kill the script entirely -- we still have
-		 * to fully load the template.
-		 */
 		return;
 	endif;
 	?>
