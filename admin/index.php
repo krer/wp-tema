@@ -31,8 +31,7 @@ function tc_admin_head() { ?>
 			<div id="tc-wrap">
     			<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="post">
 						<h2 id="pagetitle"><?php echo $themename; ?> settings</h2>
-						<?php if ( $_REQUEST['saved'] ) { ?><div style="clear:both;height:20px;"></div><div class="warning"><?php echo $themename; ?>'s options has been updated!</div><?php } ?>
-						<?php if ( $_REQUEST['reset'] ) { ?><div style="clear:both;height:20px;"></div><div class="warning"><?php echo $themename; ?>'s options has been reset!</div><?php } ?>	
+						<?php if ( $_REQUEST['saved'] ) { ?><div class="warning"><?php echo $themename; ?>'s options has been updated!</div><?php } ?>
      						<table class="maintable">
 							<?php foreach ($options as $value) { ?>
 									<?php if ( $value['type'] <> "heading" ) { ?>
