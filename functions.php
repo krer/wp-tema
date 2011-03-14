@@ -36,7 +36,7 @@ function page_menu_args( $args ) {
 }
 add_filter( 'wp_page_menu_args', 'page_menu_args' );
 
-/** Sets the post excerpt length to 35 characters. */
+/** Sets the post excerpt length to 34 characters. */
 function excerpt_length($length) {
 	return 34;
 }
