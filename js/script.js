@@ -1,20 +1,20 @@
-$.noConflict();
+jQuery.noConflict();
 
-(function($){
-	
-	// MouseOver Events	
-	$('.thumb').hover(function(){
-		$('img', this).fadeTo("fast", 0.35).addClass('box-hover');},
-		function(){
-		$('img', this).fadeTo("fast", 1).removeClass('box-hover');
+jQuery(function(){
+
+	// MouseOver Events
+	jQuery('.thumb').hover(function(){
+		jQuery('img', this).fadeTo("fast", 0.35).addClass('box-hover');},
+	function(){
+		jQuery('img', this).fadeTo("fast", 1).removeClass('box-hover');
 	});
 
-	$('.thumb_video').hover(function(){
-		$('img', this).fadeTo("fast", 0.35).addClass('box-hover');},
-		function(){
-		$('img', this).fadeTo("fast", 1).removeClass('box-hover');
+	jQuery('.thumb_video').hover(function(){
+		jQuery('img', this).fadeTo("fast", 0.35).addClass('box-hover');},
+	function(){
+		jQuery('img', this).fadeTo("fast", 1).removeClass('box-hover');
 	});
 
-	$("a[rel='gallery']").fancybox();
+	jQuery("a[rel='gallery']").fancybox();
 
-})($);
+});
