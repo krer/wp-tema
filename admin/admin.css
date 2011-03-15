@@ -1,0 +1,86 @@
+#tc-wrap { width: 740px; }
+
+#pagetitle { 
+	font-style: italic; 
+	margin: 0;
+	color: #464646;
+	font: italic 24px/35px Georgia, "Times New Roman", "Bitstream Charter", Times, serif; 
+	padding-top: 14px; 
+	text-shadow: 0 1px 0 #fff; 
+}
+		
+.admintitle { 
+	margin: 0px; 
+	padding: 10px; 
+	font-family: Georgia, serif; 
+	font-weight: normal; 
+	letter-spacing: 1px; 
+	font-size: 18px; 
+	border: 1px solid #e4e4e4; 
+	border-bottom: 0; 
+	background: #eee; 
+}
+		
+.maintable { 
+	background: #f9f9f9; 
+	margin-bottom: 20px; 
+	border: 1px solid #e4e4e4; 
+}
+		
+.mainrow { 
+	padding: 10px; 
+	border-bottom: 1px solid #e4e4e4; 
+	float: left; 
+}
+		
+.mainrow:last-child { border: 0; }
+		
+.titledesc { 
+	font-size: 12px; 
+	font-weight: 700; 
+	width: 180px; 
+	float: left;  
+}
+
+.forminp { width: 740px; }
+
+.forminp input, .forminp select, .forminp textarea { 
+	background: #fff; 
+	background: #f3f3f3; 
+	width: 280px; 
+	padding: 4px; 
+	font-size: 12px; 
+	float: left; 
+}
+
+.forminp span { 
+	font-size: 11px; 
+	float: right; 
+	width: 220px; 
+}
+
+.info { 
+	background: #ffffcc; 
+	border: 1px dotted #D8D2A9; 
+	padding: 10px; color: #333; 
+}
+		
+.forminp .checkbox { width: 20px }
+
+.info a { 
+	color: #333; 
+	text-decoration: none; 
+	border-bottom: 1px dotted #333 
+}
+
+.info a:hover { 
+	color: #666; 
+	border-bottom: 1px dotted #666; 
+}
+
+.update { 
+	background: #FFEBE8; 
+	border: 1px dotted #cc0000; 
+	padding: 10px; color: #333; 
+	font-weight: bold; 
+}
