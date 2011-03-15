@@ -16,7 +16,7 @@ while (have_posts()) : the_post();
 			
 			if ($video == "") {
 				$thumbID = get_post_thumbnail_id($post->ID); ?>
-         		<a href="<?php echo wp_get_attachment_url($thumbID); ?>" rel="gallery">  
+         		<a href="<?php echo wp_get_attachment_url($thumbID); ?>" rel="gallery" title="<?php the_title(); ?>">  
 					<div class="thumb">   
                 		<?php the_post_thumbnail('gallery'); ?>
 					</div><!-- .thumb -->
