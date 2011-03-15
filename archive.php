@@ -1,12 +1,13 @@
 <?php 
 /*
- * The template for displaying Archive pages.
+ * The template for displaying archive pages
  */
 
 get_header(); ?>
 
 	<section id="posts">
 		
+		<!-- Loop through and display the posts -->
 		<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 					
 			<article class="blogpost">
@@ -24,13 +25,15 @@ get_header(); ?>
 						<span class="comment-details"><?php comments_popup_link('No comments', '1 comment', '% Comments'); ?></span>
 					</div>
 				
+					<!-- Display an excerpt instead of full content -->
 					<?php the_excerpt(); ?>
 				</div>								
 			</article>
 			
 		<?php endwhile;	
 			else :
-				include_once(TEMPLATEPATH."/page-error.php");
+				// Include the error page
+				include_once(TEMPLATEPATH . "/page-error.php");
 			endif; ?>
 	</section>
 			

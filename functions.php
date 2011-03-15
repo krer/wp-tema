@@ -3,19 +3,19 @@
  * True colors functions and definitions
  */
  
-/** Theme defaults and support for various features. */
+// Theme defaults and support for various features.
 function tc_setup() {
 		
-		// This theme uses post thumbnails.
+		// This theme uses post thumbnails
 		add_theme_support( 'post-thumbnails' );
 		
-		// The default size. Larger images will be auto-cropped to fit.
+		// The default size. Larger images will be auto-cropped to fit
 		set_post_thumbnail_size( 190, 190, true );
 		
-		// The portfolio size. Larger images will be auto-cropped to fit.
+		// The gallery size. Larger images will be auto-cropped to fit
 		add_image_size( 'gallery', 268, 168, true );
 
-		// Add default posts and comments RSS feed links to head
+		// Add default posts and comments RSS feed links
 		add_theme_support( 'automatic-feed-links' );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -25,27 +25,27 @@ function tc_setup() {
 	}
 add_action( 'after_setup_theme', 'tc_setup' );
 
-/** Always show a home link. */
+// Always show a home link
 function page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
 add_filter( 'wp_page_menu_args', 'page_menu_args' );
 
-/** Sets the post excerpt length to 34 characters. */
+// Sets the post excerpt length to 34 characters
 function excerpt_length($length) {
 	return 34;
 }
 add_filter('excerpt_length', 'excerpt_length'); 
  
-/** Returns a "Read more" link for excerpts */
+// Adds a "Read more" link to excerpts
 function excerpt_more($more) {
        global $post;
 	return '...</p><a href="'.get_permalink().'" class="read_more">Read more</a>';
 }
 add_filter('excerpt_more', 'excerpt_more');
 
-/** Register widgetized sidebar. */
+// Register widgetized sidebar
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 			'name' => 'Sidebar',
@@ -57,7 +57,7 @@ if ( function_exists('register_sidebar') ) {
 	));
 }
 
-/** The template for displaying the comments. */
+// The template for displaying the comments
 function comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
@@ -83,7 +83,7 @@ function comments($comment, $args, $depth) {
 	</div> 
 <?php } 
 
-/** Read more directs to the top of the post */
+// "Read more" links directs to the top of the post
 function remove_more_jump_link($link) { 
 	$offset = strpos($link, '#more-');
 	if ($offset) {
@@ -97,7 +97,7 @@ function remove_more_jump_link($link) {
 }
 add_filter('the_content_more_link', 'remove_more_jump_link');
 
-/** Search only pages */
+// Search only pages
 function is_type_page() {
 	global $post;
 	if ($post->post_type == ‘page’) {
@@ -107,7 +107,7 @@ function is_type_page() {
 	}
 }
 
-/** Create a portfolio post type */
+// Create a gallery post type
 function post_type_gallery() {
 	register_post_type( 'gallery',
 		array(
@@ -132,7 +132,7 @@ function post_type_gallery() {
 }
 add_action( 'init', 'post_type_gallery' );
 
-/** Include Admin Option Panel File */
+// Include admin option panel
 include(TEMPLATEPATH . "/admin/index.php");
 
 ?>

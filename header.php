@@ -11,16 +11,21 @@
 	<head>
 		<meta charset='<?php bloginfo('charset'); ?>'>
 		<title><?php bloginfo('name'); ?> <?php wp_title('|'); ?></title>
+		
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="<?php echo get_option('tc_favicon'); ?>" title="Favicon">
+		
+		<?php if (get_option('tc_favicon')) : ?>
+			<link rel="shortcut icon" href="<?php echo get_option('tc_favicon'); ?>" title="Favicon">
+		<?php endif; ?>
+		
 		<link rel="stylesheet" href='<?php bloginfo('stylesheet_url'); ?>'>
 		<link rel="pingback" href='<?php bloginfo( 'pingback_url' ); ?>'>
 		<?php 
 			wp_enqueue_script('jquery');
 		
-		/** Support for threaded comments. */
+		// Support for threaded comments
 		if ( is_singular() )
 			wp_enqueue_script( 'comment-reply' );
 

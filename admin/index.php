@@ -1,12 +1,12 @@
 <?php
 
 function admin_head() { ?>
-		<style>
-			/* Include stylesheet */
-			<?php include(TEMPLATEPATH . "/admin/admin.css"); ?>
-		</style>
+	<style>
+		/* include stylesheet */
+		<?php include(TEMPLATEPATH . "/admin/admin.css"); ?>
+	</style>
 
-	<?php 
+<?php 
 	}
 	
 	$themename = "True colors";
@@ -25,48 +25,38 @@ function admin_head() { ?>
 										<tr class="mainrow">
 										<td class="titledesc"><?php echo $value['name']; ?></td>
 										<td class="forminp">
-									<?php } ?>	
-									<?php
+									<?php }	
 										switch ( $value['type'] ) {
 										case 'text':
 									?>
-		        							<input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option($value['id']); } else { echo $value['std']; } ?>">
+		        						<input name="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo get_option($value																				['id']); } else { echo $value['std']; } ?>">
 									<?php
 										break;
 										case 'textarea':
-										$ta_options = $value['options'];
 									?>
-										<textarea name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" cols="<?php echo $ta_options['cols']; ?>" rows="8"><?php  if( get_option($value['id']) != "") { echo stripslashes(get_settings($value['id'])); } else { echo $value['std']; } ?></textarea>
-									<?php
-										break;
-										case "checkbox":
-										if(get_option($value['id'])) { $checked = "checked=\"checked\""; } else { $checked = ""; }
-									?>
-		            				<input type="checkbox" class="checkbox" name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" value="true" <?php echo $checked; ?> />
+										<textarea name="<?php echo $value['id']; ?>" rows="8"><?php  if( get_option($value['id']) != "") { echo stripslashes																													(get_settings($value['id'])); } else { echo $value['std']; } ?></textarea>
 									<?php
 										break;
 										case "heading":
 									?>
 										</table> 
-		    									<h3 class="admintitle"><?php echo $value['name']; ?></h3>
+		    							<h3 class="admintitle"><?php echo $value['name']; ?></h3>
 										<table class="maintable">
 									<?php
 										break;
-										default:
-										break;
-									} ?>
-									<?php if ( $value['type'] <> "heading" ) { ?>
-										<span><?php echo $value['desc']; ?></span>
-										</td></tr>
-									<?php } ?>	
-							<?php } ?>
+									}
+										if ( $value['type'] <> "heading" ) { ?>
+											<span><?php echo $value['desc']; ?></span>
+											</td></tr>
+									<?php }	
+								} ?>
 							</table>
 							<p class="submit">
 								<input name="save" type="submit" value="Save changes">    
 								<input type="hidden" name="action" value="save">
 							</p>
             </form>
-</div><!--#tc-wrap-->
+		</div><!--#tc-wrap-->
  <?php
 }
 	

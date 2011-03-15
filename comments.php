@@ -1,10 +1,11 @@
 <?php
 /*
- * The template for displaying comments.
+ * The template for displaying comments
  */
 ?>
 
 <section id="comments">
+	<!-- Don't show the post if it's protected -->
 	<?php if ( post_password_required() ) : ?>
 		<p>This post is password protected!</p>
 	<?php
@@ -12,22 +13,23 @@
 	endif;
 	?>
 
+	<!-- If there are comments -->
 	<?php if( have_comments() ) : ?>
 		<h3 id="content_number"><?php comments_number('0 comments', '1 comment', '% comments'); ?></h3>
 
 		<ol>
-			<?php 
-				/* Loop through and list the comments. */
-				wp_list_comments( array( 'callback' => 'comments' ) );
-			?>
+			<!-- Display the comments -->
+			<?php wp_list_comments( array( 'callback' => 'comments' ) ); ?>
 		</ol>
 	
+		<!-- Display comments navigation -->
 		<?php 
 			if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
 				previous_comments_link( '&larr; Older Comments' );
 				next_comments_link( 'Newer Comments &rarr;' );
 			endif; 
 	else : 
+		// Show a message if the comments are closed
 		if ( ! comments_open() ) :
 	?>
 	

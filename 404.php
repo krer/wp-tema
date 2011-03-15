@@ -1,11 +1,11 @@
 <?php 
 /*
- * The template for displaying 404 pages (Not Found).
- *
+ * Template for displaying 404 pages
  */
 
 get_header();
 	
+// Include the error page
 include_once(TEMPLATEPATH . "/page-error.php");
 		
 get_sidebar();

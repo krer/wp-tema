@@ -1,8 +1,6 @@
 <?php 
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
+ * The template for all pages
  */
 
 get_header(); ?>

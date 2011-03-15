@@ -11,6 +11,7 @@
 	</section><!-- #content -->
 
 	<footer>
+		<!-- Display the custom copyright text -->
 		<?php 
 			if(get_option('tc_copytext')) :
 				echo get_option('tc_copytext');

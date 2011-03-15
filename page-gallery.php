@@ -26,7 +26,6 @@ while (have_posts()) : the_post();
 			else { 
 				if (strpos($video,'youtube') !== false) {
 					$video = str_replace("watch?v=","embed/", $video);
-					$video = str_replace("watch?v=","embed/", $video);
 				?>
          		<a href="<?php echo $video; ?>" rel="gallery" class="iframe" title="<?php the_title(); ?>">  
 					<div class="thumb_video">   

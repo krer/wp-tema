@@ -1,6 +1,6 @@
 <?php 
 /**
- * The main template file.
+ * The main template file
  */
 
 get_header(); ?>
@@ -43,7 +43,7 @@ get_header(); ?>
 					
 		<?php 
 			else :
-				include_once(TEMPLATEPATH."/page-error.php");
+				include_once(TEMPLATEPATH . "/page-error.php");
 			endif; 
 		?>
 	</section><!-- #posts -->

@@ -1,6 +1,6 @@
 <?php 
 /**
- * The template for displaying error pages.
+ * The template for displaying error pages
  */
 ?>
 
