@@ -15,6 +15,6 @@ jQuery(function(){
 		jQuery('img', this).fadeTo("fast", 1).removeClass('box-hover');
 	});
 
-	jQuery("a[rel='gallery']").fancybox();
+	jQuery("a[rel='gallery']").prettyPhoto();
 
 });

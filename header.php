@@ -33,8 +33,8 @@
 	?>
 	
 	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/script.js"></script>
-	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/js/fancybox/jquery.fancybox-1.3.4.css">
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/js/prettyPhoto/css/prettyPhoto.css">
+	<script src="<?php bloginfo('stylesheet_directory'); ?>/js/prettyPhoto/js/jquery.prettyPhoto.js"></script>
 
 	</head>
 
