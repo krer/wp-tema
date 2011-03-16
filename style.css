@@ -627,6 +627,7 @@ input[type="submit"] {
     font-weight: bold;
     width: 150px;
     padding: 8px;
+    background: #f0f0f0;
 }
 
 /* -------------------------------------------------------------------------------------
