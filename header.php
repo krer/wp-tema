@@ -12,8 +12,12 @@
 		<meta charset='<?php bloginfo('charset'); ?>'>
 		<title><?php bloginfo('name'); ?> <?php wp_title('|'); ?></title>
 		
+		<!--[if lte IE 8]>
+   			 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie8.css">
+        <![endif]-->
+		
 		<!--[if lt IE 9]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		
 		<?php if (get_option('tc_favicon')) : ?>
