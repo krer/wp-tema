@@ -61,7 +61,7 @@
 
 .info { 
 	background: #ffffcc; 
-	border: 1px dotted #D8D2A9; 
+	border: 1px dotted #d8d2a9; 
 	padding: 10px; color: #333; 
 }
 		
@@ -79,8 +79,8 @@
 }
 
 .update { 
-	background: #FFEBE8; 
-	border: 1px dotted #cc0000; 
+	background: #ffffe0;
+    border: 1px dotted #e6db55;
 	padding: 10px; color: #333; 
 	font-weight: bold; 
 }
