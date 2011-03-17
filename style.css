@@ -218,7 +218,7 @@ header nav li li a {
 	font-weight: 100;
 	text-decoration: none;
 	padding: 0;
-	border-bottom: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e4e4e4;
 	margin: 0 19px;
 	border-right: 0;
 	width: 112px;
@@ -279,7 +279,7 @@ aside #s {
 aside li li {
 	display: block;
 	margin: 7px 0 7px;
-	border-bottom: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e4e4e4;
 	padding-bottom: 7px;
 }
 
@@ -318,7 +318,7 @@ aside .widgettitle {
 
 #social li {
 	text-align: center;
-	border-bottom: 1px solid #e3e3e3;
+	border-bottom: 1px solid #e4e4e4;
 }
 
 #social li a {
@@ -350,7 +350,8 @@ aside .widgettitle {
 }
 
 .post-text .post-details {
-	border: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
 	padding: 6px;
 	margin: 0 0 5px;
 	width: 365px;
