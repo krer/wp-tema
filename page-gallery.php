@@ -24,7 +24,7 @@ while (have_posts()) : the_post();
 		<?php 	
 			}
 			else { ?>
-         		<a href="<?php echo $video; ?>" rel="gallery">  
+         		<a href="<?php echo $video; ?>" rel="gallery" title="<?php the_title(); ?>">  
 					<div class="thumb_video">   
                 		<?php the_post_thumbnail('gallery'); ?>
 					</div><!-- .thumb_video -->

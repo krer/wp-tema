@@ -43,8 +43,13 @@ header, footer, section, article, aside, nav {
  *
  */
 
+@font-face {
+	font-family: Vegur;
+	src: url('fonts/Vegur-R 0.602.otf');
+}
+
 body {
-	font-family: "Myriad pro", "Helvetica Neue", Helvetica, serif;
+	font-family: Vegur, "Myriad pro", Helvetica, serif;
 	background: url('img/bg.jpg');
 	color: #333;
 	font-size: 14px;
