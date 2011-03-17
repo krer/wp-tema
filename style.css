@@ -43,16 +43,11 @@ header, footer, section, article, aside, nav {
  *
  */
 
-@font-face {
-	font-family: Vegur;
-	src: url('fonts/Vegur-R 0.602.otf');
-}
-
 body {
-	font-family: Vegur, "Myriad pro", Helvetica, serif;
+	font-family: 'Ubuntu', Helvetica, sans-serif;
 	background: url('img/bg.jpg');
 	color: #333;
-	font-size: 14px;
+	font-size: 13px;
 }
 
 input, textarea {
@@ -67,7 +62,7 @@ a {
 
 p {
 	margin: 15px 0;
-	line-height: 24px;
+	line-height: 23px;
 }
 
 ul, ol {
@@ -182,8 +177,8 @@ header nav li a {
 	letter-spacing: 1px;
 	text-decoration: none;
 	display: block;
-	line-height: 39px;
-	padding: 8px 22px 3px;
+	line-height: 35px;
+	padding: 8px 22px 7px;
 	border-right: 1px solid #054b65;
 }
 
@@ -285,7 +280,7 @@ aside li li {
 	display: block;
 	margin: 7px 0 7px;
 	border-bottom: 1px solid #e3e3e3;
-	padding-bottom: 6px;
+	padding-bottom: 7px;
 }
 
 aside li:first-child {
@@ -356,10 +351,10 @@ aside .widgettitle {
 
 .post-text .post-details {
 	border: 1px solid #e4e4e4;
-	padding: 6px 6px 4px;
+	padding: 6px;
 	margin: 0 0 5px;
 	width: 365px;
-	font-size: 12px;
+	font-size: 11px;
 	text-align: center;
 	overflow: hidden;
 }
@@ -385,7 +380,7 @@ aside .widgettitle {
 }
 
 .blogpost h2 {
-	margin: 3px 0 1px;
+	margin: 3px 0 5px;
 	width: 380px;
 }
 
@@ -425,7 +420,7 @@ aside .widgettitle {
 }
 
 .wp-pagenavi span.current {
-	padding: 5px 9px 3px;
+	padding: 5px 9px;
     border: 1px solid #c6c6c6;
     margin-right: 6px;
 }
@@ -455,7 +450,7 @@ aside .widgettitle {
 #single_post time {
 	float: right;
 	border: 1px solid #e4e4e4;
-	padding: 6px 6px 4px;
+	padding: 6px;
 }
 
 #single_post img {

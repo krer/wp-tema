@@ -22,6 +22,7 @@
 		
 		<link rel="stylesheet" href='<?php bloginfo('stylesheet_url'); ?>'>
 		<link rel="pingback" href='<?php bloginfo( 'pingback_url' ); ?>'>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 		<?php 
 			wp_enqueue_script('jquery');
 		
