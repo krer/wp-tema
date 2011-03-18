@@ -324,7 +324,7 @@ aside .widgettitle {
 
 #social li a {
 	margin-right: 2px;
-	display: inline;
+	display: inline-block;
 } 
 
 /* -------------------------------------------------------------------------------------
