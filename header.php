@@ -12,6 +12,10 @@
 		<meta charset='<?php bloginfo('charset'); ?>'>
 		<title><?php bloginfo('name'); ?> <?php wp_title('|'); ?></title>
 		
+		<!--[if lte IE 7]>
+   			 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie7.css">
+        <![endif]-->
+		
 		<!--[if lte IE 8]>
    			 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/css/ie8.css">
         <![endif]-->

@@ -1,5 +1,7 @@
 header nav { background: url('../img/navbg.jpg') repeat-x; }
 
+aside ul li ul { padding-bottom: 0; }
+
 #social { padding-bottom: 7.5px; }
 
 #social li { height: 27px; }
