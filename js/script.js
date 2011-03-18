@@ -1,9 +1,6 @@
 jQuery.noConflict();
 
 jQuery(function(){
-
-	// Fix for ie7
-	jQuery('a').css("padding-top", 0);
 	 
 	// Fix for ie8
    jQuery('aside li:last-child').css("border-bottom","none", "margin-bottom", 0, "padding-bottom", 0);
