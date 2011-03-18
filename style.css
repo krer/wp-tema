@@ -506,9 +506,9 @@ aside .widgettitle {
 	height: 60px;
 	display: block;
 	float: left;
-	-moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-	-webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 4px lightgray;
+	-webkit-box-shadow: 0px 0px 4px lightgray;
+	box-shadow: 0px 0px 4px lightgray;
 }
 
 #comments li .image img {
