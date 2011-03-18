@@ -2,6 +2,9 @@ jQuery.noConflict();
 
 jQuery(function(){
 
+	// Fix for ie8
+   jQuery("aside li:last-child").css("border-bottom","none", "margin-bottom", 0, "padding-bottom", 0);
+
 	// MouseOver Events
 	jQuery('.thumb').hover(function(){
 		jQuery('img', this).fadeTo("fast", 0.35).addClass('box-hover');},

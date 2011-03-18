@@ -78,7 +78,7 @@
 				<?php endif; ?>
 	
 				<p>
-					<textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
+					<textarea name="comment" id="comment" rows="10" tabindex="4"></textarea>
 				</p>
 
 				<input name="submit" type="submit" id="commentSubmit" tabindex="5" value="Submit">

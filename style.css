@@ -174,7 +174,7 @@ header nav li {
 
 header nav li a {
 	color: #fff;
-	font-weight: 700;
+	font-weight: bold;
 	letter-spacing: 1px;
 	text-decoration: none;
 	display: block;
@@ -620,7 +620,7 @@ input[type="text"], textarea {
 
 #commentform textarea {
 	margin: 3px 0 5px;
-	width: 97%;
+	width: 97.5%;
 }
 
 input[type="submit"] {

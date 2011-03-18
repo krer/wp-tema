@@ -1,7 +1,3 @@
 header nav {
 	background: url('../img/navbg.jpg') repeat-x;
 }
-
-aside ul ul, #calendar_wrap, #searchform {
-	display: inline-block;
-} 
