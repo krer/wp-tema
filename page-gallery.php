@@ -18,7 +18,11 @@ while (have_posts()) : the_post();
 				$thumbID = get_post_thumbnail_id($post->ID); ?>
          		<a href="<?php echo wp_get_attachment_url($thumbID); ?>" rel="gallery" title="<?php the_title(); ?>">  
 					<div class="thumb">   
-                		<?php the_post_thumbnail('gallery'); ?>
+						<?php if ( has_post_thumbnail() ) : 
+								the_post_thumbnail('gallery');
+							else : ?>
+								<img src="http://placehold.it/268x168">	
+						<?php endif; ?>
 					</div><!-- .thumb -->
 				</a>
 		<?php 	
@@ -26,7 +30,11 @@ while (have_posts()) : the_post();
 			else { ?>
          		<a href="<?php echo $video; ?>" rel="gallery" title="<?php the_title(); ?>">  
 					<div class="thumb_video">   
-                		<?php the_post_thumbnail('gallery'); ?>
+                		<?php if ( has_post_thumbnail() ) : 
+								the_post_thumbnail('gallery');
+							else : ?>
+								<img src="http://placehold.it/268x168">	
+						<?php endif; ?>
 					</div><!-- .thumb_video -->
 				</a>
 			<?php 
