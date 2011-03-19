@@ -2,9 +2,10 @@ jQuery.noConflict();
 
 jQuery(function(){
 	 
-	// Fix for ie8
+	// Fixes for ie
    jQuery('aside li:last-child').css("border-bottom","none", "margin-bottom", 0, "padding-bottom", 0);
    jQuery('#social li').css("border-bottom", "1px solid #e4e4e4");
+   jQuery('header nav li li:last-child a').css("border-bottom:", "none", "padding-bottom", 0);
    
 	// MouseOver Events
 	jQuery('.thumb').hover(function(){

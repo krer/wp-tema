@@ -124,6 +124,7 @@ function post_type_gallery() {
     			'not_found_in_trash' => 'No Gallery Items found in Trash', 
 			),
 		'public' => true,
+		'show_in_nav_menus' => false,
         'menu_position' => 5,
         'rewrite' => array('slug' => '','with_front' => false),
         'supports' => array('title', 'custom-fields', 'thumbnail')
