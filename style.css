@@ -65,8 +65,27 @@ p {
 	line-height: 23px;
 }
 
+blockquote {
+	padding: 10px 15px;
+	display: block;
+	font-style: italic;
+	border-left: 5px solid #e4e4e4;
+	margin: 0 0 22px 5px;
+	font-size: 12px;
+	width: 450px;
+	margin: 0 auto;
+}
+
+blockquote p {
+	margin: 0;
+}
+
 ul, ol {
-	list-style: none;
+	list-style-position: inside;
+}
+
+ul li, ol li {
+	line-height: 23px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -103,11 +122,15 @@ h3 {
 }
 
 h4 {
-	font-size: 17px;
+	font-size: 18px;
 }
 
 h5 {
-	font-size: 15px;
+	font-size: 17px;
+}
+
+h6 {
+	font-size: 16px;
 }
 
 h1, h2, h3 {
@@ -158,7 +181,7 @@ footer {
  */
 
 header h1 { 
-	margin-bottom: 15px; 
+	margin-bottom: 20px; 
 }
 
 /* -------------------------------------------------------------------------------------
@@ -166,6 +189,8 @@ header h1 {
  * Menu
  *
  */
+
+header nav ul { list-style: none; }
 
 header nav li {
 	float: left;
@@ -198,11 +223,12 @@ header nav ul ul {
     background: #fff;
     border: 1px solid #116c9d;
   	display: none;
-    width: 150px;
+    width: 170px;
     padding: 2px 0;
     position: absolute;
 	margin: 0;
 	z-index: 999;
+	list-style: none;
 }
 
 header nav li:hover > ul {
@@ -222,7 +248,7 @@ header nav li li a {
 	border-bottom: 1px solid #e4e4e4;
 	margin: 0 19px;
 	border-right: 0;
-	width: 112px;
+	width: 132px;
 	height: 34px;
 }
 
@@ -261,13 +287,17 @@ aside {
  *
  */
  
+aside ul { 
+	list-style: none; 
+} 
+ 
 aside ul ul, #calendar_wrap, #searchform {
 	background: #fff;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #ccc;
 	padding: 15px;
-	-moz-box-shadow: 2px 2px 4px #bcbcbc;
-	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
-	box-shadow: 2px 2px 4px #bcbcbc;
+	-moz-box-shadow: 3px 3px 4px #ccc;
+	-webkit-box-shadow: 3px 3px 4px #ccc;
+	box-shadow: 3px 3px 4px #ccc;
 	margin-bottom: 22px;
 } 
 
@@ -279,7 +309,7 @@ aside #s {
 
 aside li li {
 	display: block;
-	margin: 7px 0 7px;
+	margin: 7px 0;
 	border-bottom: 1px solid #e4e4e4;
 	padding-bottom: 7px;
 }
@@ -295,7 +325,7 @@ aside li:last-child {
 }
 
 aside .widgettitle {
-	margin: 0 0 0 2px;
+	margin: 0 0 2px 2px;
 }
 
 #wp-calendar caption {
@@ -335,14 +365,14 @@ aside .widgettitle {
 
 .blogpost {
 	background: #fff;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #ccc;
 	padding: 15px;
 	margin-bottom: 20px;
 	width: 591px;
 	overflow: hidden;
-	-moz-box-shadow: 2px 2px 4px #bcbcbc;
-	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
-	box-shadow: 2px 2px 4px #bcbcbc;
+	-moz-box-shadow: 3px 3px 4px #ccc;
+	-webkit-box-shadow: 3px 3px 4px #ccc;
+	box-shadow: 3px 3px 4px #ccc;
 }
 
 .post-text {
@@ -373,11 +403,7 @@ aside .widgettitle {
 	float: left;
 }
 
-.blogpost p {
-	margin: 0;
-}
-
-.blogpost p a {
+.blogpost p, .blogpost p a {
 	margin: 0;
 }
 
@@ -413,7 +439,7 @@ aside .widgettitle {
 
 .wp-pagenavi a {
 	margin-right: 6px;
-    padding: 5px 9px 3px;
+    padding: 5px 9px;
     border: 1px solid #c6c6c6;
 }
 
@@ -439,13 +465,13 @@ aside .widgettitle {
 
 #single_post {
 	background: #fff;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #ccc;
 	padding: 15px;
 	margin-bottom: 20px;
 	width: 590px;
-	-moz-box-shadow: 2px 2px 4px #bcbcbc;
-	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
-	box-shadow: 2px 2px 4px #bcbcbc;
+	-moz-box-shadow: 3px 3px 4px #ccc;
+	-webkit-box-shadow: 3px 3px 4px #ccc;
+	box-shadow: 3px 3px 4px #ccc;
 	position: relative;
 }
 
@@ -459,10 +485,18 @@ aside .widgettitle {
 	max-width: 584px;
 	height: auto;
 	width: auto;
-	float: left;
-	margin: 0 15px 10px 0;
 	padding: 2px;
 	border: 1px solid #e4e4e4;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 10px 0;
 }
 
 #single_post h2 {
@@ -471,6 +505,10 @@ aside .widgettitle {
 
 #single_post p:last-child {
 	margin-bottom: 0;
+}
+
+#single_post ul, #single_post ol {
+	margin-bottom: 15px;
 }
 
 /* -------------------------------------------------------------------------------------
@@ -486,13 +524,14 @@ aside .widgettitle {
 } 
 
 #comments #content_number { 
-	border-bottom: 1px dotted #D9D9D9;
+	border-bottom: 1px dotted #d9d9d9;
 	padding-bottom: 10px;
 	margin: 15px 0 0;
 }
 
 #comments ol {
 	margin: 5px 0 30px;
+	list-style: none;
 }
 
 #comments ol li {
@@ -507,9 +546,9 @@ aside .widgettitle {
 	height: 60px;
 	display: block;
 	float: left;
-	-moz-box-shadow: 0px 0px 4px lightgray;
-	-webkit-box-shadow: 0px 0px 4px lightgray;
-	box-shadow: 0px 0px 4px lightgray;
+	-moz-box-shadow: 0 0 4px lightgray;
+	-webkit-box-shadow: 0 0 4px lightgray;
+	box-shadow: 0 0 4px lightgray;
 }
 
 #comments li .image img {
@@ -613,7 +652,6 @@ input[type="text"], textarea {
 } 
 
 #respond h3 {
-	padding-bottom: none;
 	border: none;
 	margin: 15px 0 0;
 }
@@ -624,7 +662,7 @@ input[type="text"], textarea {
 }
 
 input[type="submit"] {
-    border: 1px solid #D5D5D5;
+    border: 1px solid #d5d5d5;
     font-size: 13px;
     font-weight: bold;
     width: 150px;
@@ -640,15 +678,15 @@ input[type="submit"] {
  
 .gallery {
 	background: #fff;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #ccc;
 	padding: 10px;
 	width: 274px;
 	margin: 0 15px 20px 0;
 	position: relative;
 	float: left;
-	-moz-box-shadow: 2px 2px 4px #bcbcbc;
-	-webkit-box-shadow: 2px 2px 4px #bcbcbc;
-	box-shadow: 2px 2px 4px #bcbcbc;
+	-moz-box-shadow: 3px 3px 4px #ccc;
+	-webkit-box-shadow: 3px 3px 4px #ccc;
+	box-shadow: 3px 3px 4px #ccc;
 	text-align: center;
 }
 

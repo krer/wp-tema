@@ -13,7 +13,11 @@ get_header(); ?>
 			<article class="blogpost">
 				
 				<div class="thumb-box">
-					<?php the_post_thumbnail(); ?>
+					<?php if ( has_post_thumbnail() ) : 
+							the_post_thumbnail(); 
+						else : ?>
+							<img src="http://placehold.it/190x190">	
+						<?php endif; ?>
 				</div><!-- .thumb-box -->
 							
 				<div class="post-text">
